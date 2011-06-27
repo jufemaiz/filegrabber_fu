@@ -1,7 +1,7 @@
 sinatra
 fileutils
+open-uri
 haml
 sass
 coffee-script
 linguistics
-open-uri
