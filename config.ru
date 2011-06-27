@@ -1,2 +1,2 @@
-require 'application'
+require 'file_packer'
 run Sinatra::Application
