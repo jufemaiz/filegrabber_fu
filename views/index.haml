@@ -1,0 +1,13 @@
+.container
+	/ - unless @file.nil?
+	/ 	.column.span-24.last
+	/ 		= @file.inspect
+	.column.span-12.prepend-6.append-6.last
+		%form{ :method => "post", :action => "/" }
+			%fieldset
+				%legend Upload a file from the web
+				.input.text.url
+					%label{ :for => "file_location" } File Location
+					%input{ :type => "text", :name => "file_location" }
+				.input.submit
+					%input{ :type => "submit" } Fetch &amp; Upload

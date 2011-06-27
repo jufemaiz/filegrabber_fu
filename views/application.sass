@@ -1,0 +1,968 @@
+body
+	margin: 0
+	padding: 0
+	position: relative
+	font-family: Helvetica, Arial, sans-serif
+	background: #eee
+	color: #222
+	height: 100%
+	font-size: 80%
+
+hr
+	margin: 0
+	padding: 0
+	background: #fff
+	
+a
+	img
+		border: none
+		
+h1
+	font-size: 200%
+h2
+	font-size: 150%
+	border-bottom: 2px solid #ddd
+	margin-bottom: 10px
+h3
+	font-size: 130%
+	margin: 5px 0
+h4
+	font-size: 115%
+h5
+	font-size: 135%
+
+.accessibility
+	display: none
+	
+#header
+	background: #333
+	color: #fff
+	a
+		color: #eee
+		text-decoration: none
+		&:active, &:hover, &:focus
+			color: #fff
+			text-decoration: underline
+	.container
+		height: 30px
+	#branding
+		height: 30px
+		background: #111
+		#brand
+			height: 100%
+			overflow: hidden
+			h1
+				height: 100%
+				margin: 0
+				font-size: 120%
+				line-height: 30px
+				a
+					height: 100%
+					display: block
+					img
+						overflow: hidden
+						padding-top: 5px
+		#globalUser
+			height: 30px
+			line-height: 30px
+			ul
+				list-style: none
+				margin: 0
+				padding: 0
+				text-align: right
+				li
+					margin: 0
+					padding: 0
+					display: inline-block
+					a, span
+						display: inline-block
+						padding: 0 6px
+						white-space: nowrap
+					&.sub-menu
+						padding-right: 20px
+						background: url('http://ric.energy.com.au/resources/images/ui/submenu-arrow.png') center right no-repeat
+						position: relative
+						&:hover ul, &:focus ul, &:active ul
+							display: block !important
+						ul
+							display: none
+							position: absolute
+							z-index: 10
+							right: 0
+							background: #111
+							padding: 0 2px 2px 2px
+							min-width: 150px
+							text-align: left
+							li
+								margin: 0
+								display: block
+								&.separator
+									border-top: 1px dashed #ccc
+								a
+									padding: 0 10px
+									line-height: 30px
+									display: block
+									&:hover, &:focus, &:active
+										background: #333
+
+	#navigation
+		height: 30px
+		margin: 0
+		padding: 0
+		#globalNav
+			height: 30px
+			line-height: 30px
+			ul
+				list-style: none
+				margin: 0
+				padding: 0
+				text-align: left
+				li
+					margin: 0 15px 0 0 
+					padding: 0
+					position: relative
+					display: inline-block
+					font-weight: bold
+					a, span
+						display: inline-block
+						padding: 0
+						white-space: nowrap
+					&.sub-menu
+						padding-right: 20px
+						background: url('http://ric.energy.com.au/resources/images/ui/submenu-arrow.png') center right no-repeat
+						position: relative
+						&:hover ul, &:focus ul, &:active ul
+							display: block !important
+						ul
+							display: none
+							position: absolute
+							z-index: 10
+							left: -10px
+							background: #111
+							padding: 0 2px 2px 2px
+							li
+								margin: 0
+								display: block
+								&.separator
+									border-top: 1px dashed #ccc
+								a
+									padding: 0 10px 0 20px
+									line-height: 30px
+									display: block
+									&:hover, &:focus, &:active
+										background: #333
+					&.picklist
+						a
+							position: relative
+							span.count
+								display: none
+								position: absolute
+								top: 2px
+								right: -10px
+								padding: 2px 4px
+								font-size: 10px
+								line-height: 10px
+								font-weight: bold
+								color: #fff
+								background: red
+								-moz-border-radius: 4px
+								-webkit-border-radius: 4px
+								border-radius: 4px
+
+		#globalSearch
+			form
+				margin: 0
+				padding: 0
+				fieldset
+					border: 0
+					margin: 0
+					padding: 0
+					text-align: right
+					legend
+						display: none
+					label
+						position: absolute
+						color: #333
+						margin: 7px 0 0 30px
+						font-weight: normal
+					input
+						border: 0
+						margin: 3px 3px 3px 0
+						padding: 0 110px 0 30px
+						line-height: 25px
+						height: 25px
+						-moz-border-radius: 5px 0 0 5px
+						-webkit-border-radius: 5px 0 0 5px
+						border-radius: 5px 0 0 5px
+					select
+						position: relative
+						margin-left: -110px
+						width: 100px
+						border: 1px solid #fff
+						color: #498FCD
+						font-weight: bold
+						&:focus, &:hover, &:active
+							border-color: #498FCD
+							color: #111
+					button
+						background: #498FCD
+						border: none
+						color: #fff
+						height: 25px
+						padding-bottom: 2px
+						position: relative
+						top: 0
+						display: inline-block
+						-moz-border-radius: 0 5px 5px 0
+						-webkit-border-radius: 0 5px 5px 0
+						border-radius: 0 5px 5px 0
+#content
+	background: #fff
+	min-height: 500px
+	padding: 20px 0	
+	h1
+		margin-bottom: 20px
+	a
+		text-decoration: none
+		color: #498FCD
+		&:hover, &:active, &:focus
+			text-decoration: underline
+		&.picklist
+			&.added
+				background: transparent
+	#contentTitle
+		div.column
+			position: relative
+		div.picklist-controller
+			position: absolute
+			top: 0
+			right: 0
+			a.picklist
+				display: block
+				padding-left: 20px
+				line-height: 200%
+				background: url('http://ric.energy.com.au/resources/images/icons/global/sg-plus.png') left center no-repeat
+				&.added
+					background-image: url('http://ric.energy.com.au/resources/images/icons/global/sg-minus.png')
+	table
+		width: 100%
+		border-spacing:none
+		border-collapse:collapse
+		border-top: 0px solid #ccc
+		border-bottom: 0px solid #ccc
+		font-size: 95%
+		margin-bottom: 20px
+		vertical-align:top
+		caption
+			margin: 10px 0
+			text-align: center
+		col
+			.binary
+				text-align: center
+			&:hover
+				background: #eeeef6
+		tr
+			th, td
+				padding: 5px 2px 3px 2px
+				border-right: 1px solid #fff
+				vertical-align: top
+				text-align: left
+				background: inherit !important
+				&:last-child
+					border-right: none
+		thead
+			border-bottom: 1px solid #ddd
+			background: #eee
+			tr
+				th
+					white-space: nowrap
+					background: #eee
+					font-weight: 400
+					color: #333
+					border-bottom: none
+					font-size: 110%
+					border-right: 1px solid #fff
+					abbr,acronym
+						border-bottom: 1px dashed #aaa
+					a
+						display: block
+						font-weight: bold
+						color: #333
+					&.sortable
+						a,a.filter
+							padding-right: 20px
+							background: url("http://ric.energy.com.au/resources/images/ui/sortable.png") no-repeat top right
+						&.asc
+							a:hover, a:active, a:focus
+								background-image: url("http://ric.energy.com.au/resources/images/ui/sortable_asc.png")
+							&.active
+								a
+									background-image: url("http://ric.energy.com.au/resources/images/ui/sorted_asc.png")
+									&:hover, &:active, &:focus
+										background-image: url("http://ric.energy.com.au/resources/images/ui/sorted_desc.png")
+						&.desc
+							a:hover
+								background-image: url("http://ric.energy.com.au/resources/images/ui/sortable_desc.png")
+							&.active
+								a
+									background-image: url("http://ric.energy.com.au/resources/images/ui/sorted_desc.png")
+									&:hover, &:active, &:focus
+										background-image: url("http://ric.energy.com.au/resources/images/ui/sorted_asc.png")
+						&:hover
+							background-color: #ddd !important
+					&.active
+						background: #ddd !important
+		tbody
+			tr
+				background: #fff
+				&:nth-child(even)
+					background: #f6f6f6
+				&:hover
+					background: #FEDA89
+				th,td
+					padding: 8px 2px 7px 2px
+					border-bottom: 1px solid #ddd
+				th
+					font-weight: bold
+					background: inherit
+					&.sorted
+						background: #f3f3f3
+					a
+						display: block
+						&:hover, &:active, &:focus
+							text-decoration: underline
+				td
+					&.number, &.numeric
+						text-align: right
+					&.binary
+						text-align: center
+					dl
+						border-bottom: none !important
+	div.pagination
+		text-align: center
+		margin-bottom: 10px
+		a,span
+			display: inline-block
+			padding: 5px 10px
+			&.prev
+				margin-right: 20px
+			&.next
+				margin-left: 20px
+		a
+			border: 2px solid #eee
+			&:hover, &:active, &:focus
+				text-decoration: underline
+				background-color: #498FCD
+				color: #fff
+			&.current
+				background-color: #498FCD
+				color: #fff
+		span
+			color: #999
+
+	div.asset-summary
+		color: #666
+		font-size: 80%
+		text-align: center
+
+	div.filters
+		background: #eee
+		padding: 10px
+		-moz-border-radius: 5px
+		-webkit-border-radius: 5px
+		border-radius: 5px
+		-moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1)
+		-webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1)
+		box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1)
+		h3
+			color: #999
+			font-size: 125%
+			margin-bottom: 10px
+			text-shadow: #fff 1px
+		p
+			font-size: 100%
+			line-height: 120%
+			color: #333
+			margin-bottom: 10px
+	
+	div.picklist-container
+		background: #eee
+		padding: 10px
+		-moz-border-radius: 5px
+		-webkit-border-radius: 5px
+		border-radius: 5px
+		-moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1)
+		-webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1)
+		box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1)
+		h3
+			color: #999
+			font-size: 125%
+			margin-bottom: 10px
+			text-shadow: #fff 1px
+		p
+			font-size: 100%
+			line-height: 120%
+			color: #333
+			margin-bottom: 10px
+		dl.picklist-listing
+			dd
+				position: relative
+				a.remove
+					position: absolute
+					top: 0
+					right: 0
+					color: #000
+					&:hover, &:active, &:focus
+						color: red
+
+	div
+		div.title
+			position: relative
+			a.toggle
+				position: absolute
+				top: 0
+				right: 0
+				font-size: 90%
+				text-indent: -999999px
+				height: 2.2em
+				width: 16px
+				background: url('http://ric.energy.com.au/resources/images/icons/global/sg-minus.png') no-repeat 50% 50%
+		&.opened-content
+			div.title
+				a.toggle
+					background-image: url('http://ric.energy.com.au/resources/images/icons/global/sg-minus.png')
+		&.closed-content
+			div.title
+				a.toggle
+					background-image: url('http://ric.energy.com.au/resources/images/icons/global/sg-plus.png')
+
+	dl.information
+		margin-top: 0
+		border-bottom: 1px solid #eee
+		dt
+			font-size: 90%
+			color: #666
+			font-weight: normal
+		dd
+			font-size: 110%
+			margin: 0 0 5px 0
+
+	dl.relationships
+		margin-top: 10px
+		border-bottom: 1px solid #eee
+		position: relative
+		dt
+			padding: 5px 0
+			border-top: 1px solid #eee
+			position: absolute
+			left: 0
+			width: 33%
+		dd
+			margin-left: 33%
+			width: 67%
+			dl
+				position: relative
+				margin: 0
+				border: 0
+				dt,dd
+					padding: 5px 0
+					border-top: 1px solid #eee
+				dt
+					width: 50%
+				dd
+					margin-left: 50%
+					width: 50%
+			
+	dl.tree
+		margin: 0
+		padding: 0
+		width: 100%
+		dt, dd
+			display: block
+			padding-left: 20px
+			background: url(http://ric.energy.com.au/resources/images/ui/bullet.png) no-repeat 5px .8em
+			border-bottom: none
+			text-align: left
+		dt
+			font-weight: 400
+			width: auto
+			color: #000
+			padding: 0
+			&.title
+				cursor: pointer
+				font-size: 120%
+				font-weight: 400
+				margin: 8px -10px 5px -10px
+				padding: 10px 0 0 0
+				border-top: 1px solid #ddd
+				-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.7)
+				-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.7)
+				box-shadow: inset 0 0 1px rgba(255,255,255,.7)
+				margin-left: -10px
+				background: url("http://ric.energy.com.au/resources/images/icons/global/sg-plus.png") no-repeat 10px 13px
+				padding-left: 20px
+				text-indent: 10px
+				&.expanded
+					background: url("http://ric.energy.com.au/resources/images/icons/global/sg-minus.png") no-repeat 9px .8em
+					padding-left: 20px
+					text-indent: 10px
+		dd
+			margin: 0
+			padding: 0
+			padding-left: 20px
+			&.selected
+				background-image: url("http://ric.energy.com.au/resources/images/icons/global/sg-tick.png")
+				background-position: 0 0
+			&.opened
+				dl
+					dt
+						background: url("http://ric.energy.com.au/resources/images/ui/contract.png") no-repeat left 10px
+						margin-left: -18px
+						padding-left: 18px
+						&:hover
+							background: url(http://ric.energy.com.au/resources/images/ui/contract_hover.png) no-repeat left 10px
+			&.closed
+				dl
+					dt
+						background: url(http://ric.energy.com.au/resources/images/ui/expand.png) no-repeat left 10px
+						margin-left: -18px
+						padding-left: 18px
+						&:hover
+							background: url(http://ric.energy.com.au/resources/images/ui/expand_hover.png) no-repeat left 10px
+
+			a.remove
+				display: block
+				color: #000
+				font-weight: 700
+				background-position: right 50%
+				background-repeat: no-repeat
+				&:hover, &:active, &:focus
+					background: url(http://ric.energy.com.au/resources/images/icons/global/sg-cross.png)
+					background-position: right 50%
+					background-repeat: no-repeat
+
+	dl.measurement-points
+		dt
+			margin-top: 5px
+			&.opened, &.closed
+				cursor: n-resize
+				padding-left: 20px
+				background: url('http://dc1ld08317.energy.com.au:10000/resources/images/ui/contract.png') left 3px no-repeat
+			&.opened
+				cursor: n-resize
+				background-image: url('http://dc1ld08317.energy.com.au:10000/resources/images/ui/contract.png')
+				&:hover, &:focus, &:active
+					background-image: url('http://dc1ld08317.energy.com.au:10000/resources/images/ui/contract_hover.png')
+			&.closed
+				cursor: s-resize
+				background-image: url('http://dc1ld08317.energy.com.au:10000/resources/images/ui/expand.png')
+				&:hover, &:focus, &:active
+					background-image: url('http://dc1ld08317.energy.com.au:10000/resources/images/ui/expand_hover.png')
+			&.measurement
+				margin-left: 25px
+				margin-bottom: 5px
+		dd
+			margin: 0
+			padding-left: 20px
+			ul
+				margin: 0
+			&.measurement
+				margin-bottom: 5px
+				margin-left: 37px
+				background: url('http://dc1ld08317.energy.com.au:10000/resources/theme/../images/ui/bullet.png') 10px 8px no-repeat
+		dl
+			margin-bottom: 0
+
+	dl.statuses
+		padding-bottom: 5px
+		margin-bottom: 10px
+		dt.status.name
+			border-top: 1px solid #eee
+			padding: 5px 0
+	dl.status-values
+		padding-bottom: 5px
+		margin-bottom: 10px
+		dt.status
+			padding: 5px 0
+			clear: both
+			border-top: 1px solid #eee
+		dd.status
+			padding: 0 0 5px 0
+			margin: 0
+			text-align: left
+			line-height: 20px
+			.values
+				display: inline-block
+				width: 230px
+				margin-right: 5px
+				.analogue
+					.value
+						.analogue
+							border: 2px solid #ccc
+							background: #eee
+							font-weight: bold
+							padding: 0px
+							text-align: center
+							font-size: 105%
+							&.inactive
+								opacity: 0.5
+				.binary
+					.value
+						width: 115px
+						display: inline-block
+						width: 110px
+						.binary
+							opacity: 0.25
+							border: 2px solid #060
+							background: #cfc
+							color: #060
+							padding: 0px
+							text-align: center
+							font-size: 90%
+							overflow: hidden
+							&.abnormal
+								border-color: #600
+								background: #fcc
+								color: #600
+							&.active
+								opacity: 1
+								font-weight: bold
+								font-size: 100%
+			.timestamp
+				display: inline-block
+				width: 220px
+				text-align: right
+				color: #666
+				.timestamp
+					span.time
+						color: #000
+						font-size: 110%
+			.values
+				width: 220px
+				.binary
+					.value
+						width: 105px
+	
+	#contentMap
+		height: 120px
+		background: #eee
+		margin-bottom: 20px
+		position: relative
+		z-index: 1
+		#gmap
+			height: 100%
+			width: 100%
+		#gmapController
+			position: absolute
+			bottom: 0
+			right: 50%
+			margin-right: -475px
+			a
+				color: #222
+				background: #fff
+				display: block
+				padding: 5px 15px
+				-moz-border-radius: 10px 10px 0 0
+				-webkit-border-radius: 10px 10px 0 0
+				border-radius: 10px 10px 0 0
+
+div.asset, div.asset-group
+	position: relative
+	padding-left: 20px
+	background: url() 0 2px no-repeat
+	display: inline-block
+	span.icon
+		position: absolute
+		display: block
+		top: 0
+		left: 0
+		width: 16px
+		height: 2.5em
+		span.monitored
+			position: absolute
+			top: 0
+			left: 0
+			height: 7px
+			width: 7px
+			background: #FDB513
+			-moz-border-radius: 5px
+			-webkit-border-radius: 5px
+			border-radius: 5px
+	span.identity
+		display: block
+		line-height: 150%
+		white-space: nowrap
+	span.eaid
+		color: #666
+		font-size: 90%
+		line-height: 111%
+		white-space: nowrap
+	a
+		display: inline
+		&:hover, &:active, &:focus
+			span.identity.name
+				text-decoration: underline
+			span.identity
+				text-decoration: none
+		&.remove
+			position: absolute
+			top: 0
+			right: 0
+	&.bsp
+		background-image: url('/img/icons/assets/sb-bsp.png')
+	&.sts
+		background-image: url('/img/icons/assets/sb-sts.png')
+	&.zones
+		background-image: url('/img/icons/assets/sb-zone.png')
+	&.dcs
+		background-image: url('/img/icons/assets/sb-dc.png')
+	&.other-assets
+		background-image: url('/img/icons/assets/sb-sc.png')
+	&.equipment
+		background-image: url('/img/icons/assets/sb-equip.png')
+		&.switch
+			background-image: url('/img/icons/assets/sb-sw.png')
+		&.transformer
+			background-image: url('/img/icons/assets/sb-tx.png')
+	&.load-areas
+		background-image: url('http://dc1ld08317.energy.com.au:10000/resources/theme/../images/icons/assets/sb-la.png')
+	&.feeders
+		background-image: url('/img/icons/assets/sb-fdr.png')
+		&._11kv
+			background-image: url('/img/icons/assets/sb-fdr11.png')
+		&._33kv
+			background-image: url('/img/icons/assets/sb-fdr33.png')
+		&._66kv
+			background-image: url('/img/icons/assets/sb-fdr66.png')
+		&._132kv
+			background-image: url('/img/icons/assets/sb-fdr132.png')
+table
+	div.asset, div.asset-group
+		display: block
+
+h1
+	div.asset,div.asset-group
+		display: inline-block
+		padding-left: 40px
+		background-position: 0 5px
+		span.icon
+			width: 32px
+			height: 2em
+			span.monitored
+				height: 14px
+				width: 14px
+				-moz-border-radius: 20px
+				-webkit-border-radius: 20px
+				border-radius: 20px
+				top: 2px
+		span.name
+			line-height: 120%
+		span.eaid
+			color: #666
+			font-size: 80%
+			line-height: 100%
+		&.bsp
+			background-image: url('/img/icons/assets/lb-bsp.png')
+		&.sts
+			background-image: url('/img/icons/assets/lb-sts.png')
+		&.zones
+			background-image: url('/img/icons/assets/lb-zone.png')
+		&.dcs
+			background-image: url('/img/icons/assets/lb-dc.png')
+		&.other-assets
+			background-image: url('/img/icons/assets/lb-sc.png')
+		&.load-areas
+			background-image: url('http://dc1ld08317.energy.com.au:10000/resources/theme/../images/icons/assets/la.png')
+		&.feeders
+			background-image: url('/img/icons/assets/lb-fdr.png')
+			&._11kv
+				background-image: url('/img/icons/assets/lb-fdr11.png')
+			&._33kv
+				background-image: url('/img/icons/assets/lb-fdr33.png')
+			&._66kv
+				background-image: url('/img/icons/assets/lb-fdr66.png')
+			&._132kv
+				background-image: url('/img/icons/assets/lb-fdr132.png')
+	div.separator
+		display: inline-block
+		color: #fff
+		padding: 0
+		margin-right: 20px
+		span
+			display: block
+			&.primary
+				line-height: 120%
+				background: url("http://dmc.pinc.energy.com.au/images/css/title/breadcrumb.png") no-repeat 50% 50%
+				text-indent: -999999999px
+				width: 30px
+			&.secondary
+				font-size: 80%
+				line-height: 100%
+	div.breadcrumb
+		padding-left: 0
+		background: none !important
+		span.title
+			display: block
+			line-height: 120%
+		span.subtitle
+			display: block
+			color: #666
+			font-size: 80%
+			line-height: 100%
+		
+
+div.asset-group
+	padding-left: 20px
+	background: url() 0 2px no-repeat
+	span.identity
+		display: block
+		line-height: 150%
+	span.number, span.eaid
+		color: #666
+		font-size: 90%
+		line-height: 111%
+	a
+		display: inline
+		&:hover, &:active, &:focus
+			span.identity.name
+				text-decoration: underline
+			span.identity
+				text-decoration: none
+	&.load-areas
+		background-image: url('http://dc1ld08317.energy.com.au:10000/resources/theme/../images/icons/assets/sb-la.png')
+	&.feeders
+		background-image: url('/img/icons/assets/sb-fdr.png')
+		&._11kv
+			background-image: url('/img/icons/assets/sb-fdr11.png')
+		&._33kv
+			background-image: url('/img/icons/assets/sb-fdr33.png')
+		&._66kv
+			background-image: url('/img/icons/assets/sb-fdr66.png')
+		&._132kv
+			background-image: url('/img/icons/assets/sb-fdr132.png')
+
+div.separator
+	display: inline-block
+	padding-left: 20px
+	span.separator
+		display: block
+	span
+
+div.asset-menu
+	position: absolute
+	top: -12px
+	right: 100%
+	padding-right: 20px
+	background: url('/img/asset-menu-side-right.png') right top no-repeat
+	z-index: 9999
+	ul.asset-menu
+		background: #fff
+		padding: 6px 11px 11px 11px
+		border: 4px solid #ccc
+		border-right: 0
+		width: auto !important
+		font-size: 95%
+		list-style: none
+		margin: 0
+		padding: 0
+		li
+			a
+				padding: 2px 4px
+				display: block
+				white-space: nowrap
+				font-weight: normal !important
+				&:hover, &:active, &:focus
+					background: #498FCD
+					color: #fff !important
+	&.menu-right
+		left: 100%
+		right: auto
+		padding-right: 0
+		padding-left: 20px
+		background: url('/img/asset-menu-side.png') left top no-repeat !important
+		ul.asset-menu
+			border: 4px solid #ccc
+			border-left: 0
+			background: #fff
+		
+h1
+	div.asset-menu
+		ul.asset-menu
+			font-size: 50%
+			li
+				a
+					padding: 5px 10px
+
+
+
+#footer
+	padding: 20px 0
+	font-size: 85%
+	dl
+		position: relative
+		padding-left: 80px
+		margin-bottom: 10px
+		dt
+			position: absolute
+			width: 70px
+			left: 0
+		dd
+			display: inline-block
+	a
+		color: #999
+		text-decoration: none
+		&:hover, &:active, &:active
+			text-decoration: underline
+	.column.span-6.last
+		text-align: right
+
+#modals
+	.modal
+		display: none
+		z-index: 50
+		.cover
+			display: block
+			z-index: 99
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: #000
+			opacity: 0.5
+		.overlay
+			display: block
+			position: absolute
+			z-index: 100
+			top: 100px
+			height: auto
+			max-height: 600px
+			left: 50%
+			width: 710px
+			margin-left: -375px
+			/* border: 10px solid #ccc */
+			-moz-border-radius: 20px
+			-webkit-border-radius: 20px
+			border-radius: 20px
+			-moz-box-shadow: #000 0 0 20px
+			padding: 20px
+			background: #fff
+			div.close a
+				position: absolute
+				right: 20px
+				top: 24px
+				padding-left: 20px
+				text-decoration: none
+				line-height: 16px
+				background: url('http://dc1ld08317.energy.com.au:10000/resources/theme/../images/icons/global/sg-cross.png') left center no-repeat
+				&:hover, &:active, &:focus
+					background: url('http://dc1ld08317.energy.com.au:10000/resources/theme/../images/icons/global/sb-cross.png') left center no-repeat
+			dl.picklist-listing
+				dd
+					position: relative
+					margin-left: 0
+					padding-right: 10px
+					a.remove
+						position: absolute
+						top: 0
+						right: 0
